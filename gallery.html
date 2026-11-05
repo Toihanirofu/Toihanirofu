@@ -26,12 +26,17 @@
       transform: scale(1.01);
     }
 
-    /* スマホだけ画像を大きく表示 */
-    @media (max-width: 768px) {
-      img {
-        max-width: 90%;
-      }
-    }
+/* スマホだけ画像を大きくして、少し上に移動 */
+@media (max-width: 768px) {
+  img {
+    max-width: 90%;
+    transform: translateY(-40px);
+  }
+
+  img:hover {
+    transform: translateY(-40px) scale(1.01);
+  }
+}
   </style>
 </head>
 <body>
