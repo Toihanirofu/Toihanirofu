@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,52 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>profile</title>
   <style>
-body {
-  margin: 0;
-  background-color: #000;
-  color: #777;
-  font-family: "SF Mono", Courier, monospace;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding-top: 18vh; /* ← デスクトップ用の余白 */
-  padding-bottom: 40px;
-  box-sizing: border-box;
-}
-
-img {
-  width: 30%;
-  max-width: 600px;
-  height: auto;
-  margin-bottom: 40px;
-}
-
-/* 👇 スマホだけ余白をさらに小さくして上寄せに */
-@media (max-width: 768px) {
-  body {
-    padding-top: 19vh; /* スマホ用に、上にグッと寄せる */
-  }
-
-  img {
-    width: 80%;
-    max-width: none;
-  }
-}
-    p {
-      font-size: 11px;
-      line-height: 1.4;
-      text-align: center;
+    body {
       margin: 0;
+      background-color: #000;
+      color: #777;
+      font-family: "SF Mono", Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 18vh 20px 40px;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 30%;
+      max-width: 600px;
+      height: auto;
+      margin-bottom: 60px;
+    }
+
+    .name {
+      font-family: "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+      font-weight: 400;
+      color: #aaa;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      text-align: center;
+      margin: 0 0 24px;
+    }
+
+    .description {
+      font-size: 11px;
+      line-height: 1.6;
+      text-align: left;
+      max-width: 420px;
+      width: 100%;
+      margin: 0;
+    }
+
+    .sns {
+      color: #666;
+      font-size: 11px;
+      margin: 24px 0 0;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 19vh;
+      }
+
+      img {
+        width: 80%;
+        max-width: none;
+      }
     }
   </style>
 </head>
 <body>
   <img src="images/profile2026.png" alt="profile2026.png">
-  <p>　　トイハニロフ</p>
-  <p>作詞、作編曲、歌、ミックス、マスタリング、アートワーク、動画など全てを自身で手がけている。
-</p>
-  <p>　　snsなし</p>
+
+  <p class="name">トイハニロフ</p>
+
+  <p class="description">作詞、作編曲、歌、ミックス、マスタリング、アートワーク、動画など全てを自身で手がけている。</p>
+
+  <p class="sns">snsなし</p>
 </body>
 </html>
