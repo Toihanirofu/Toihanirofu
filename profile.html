@@ -11,46 +11,55 @@
       background-color: #000;
       color: #777;
       font-family: "SF Mono", Courier, monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
       min-height: 100vh;
       padding: 18vh 20px 40px;
       box-sizing: border-box;
     }
 
-    img {
-      width: 30%;
+    .gallery {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .artwork {
+      display: block;
+      width: 30vw;
       max-width: 600px;
       height: auto;
-      margin-bottom: 60px;
+    }
+
+    .caption {
+      width: 100%;
+      max-width: 750px;
+      margin-top: 60px;
+      text-align: center;
     }
 
     .name {
       font-family: "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
       font-weight: 400;
       color: #aaa;
-      font-size: 16px;
+      font-size: 13px;
       letter-spacing: 0.15em;
-      text-align: center;
-      margin: 0 0 24px;
+      margin: 0 0 7px;
     }
 
     .description {
-      font-size: 11px;
+      font-size: 10px;
       line-height: 1.6;
-      text-align: left;
-      max-width: 420px;
-      width: 100%;
-      margin: 0;
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .sns {
       color: #666;
-      font-size: 11px;
-      margin: 24px 0 0;
-      text-align: center;
+      font-size: 10px;
+      margin: 12px 0 0;
     }
 
     @media (max-width: 768px) {
@@ -58,20 +67,26 @@
         padding-top: 19vh;
       }
 
-      img {
-        width: 80%;
-        max-width: none;
+      .artwork {
+        width: 80vw;
+      }
+
+      .caption {
+        width: 90%;
+        margin-top: 60px;
       }
     }
   </style>
 </head>
 <body>
-  <img src="images/profile2026.png" alt="profile2026.png">
+  <div class="gallery">
+    <img class="artwork" src="images/profile2026.png?v=2" alt="profile2026.png">
 
-  <p class="name">トイハニロフ</p>
-
-  <p class="description">作詞、作編曲、歌、ミックス、マスタリング、アートワーク、動画など全てを自身で手がけている。</p>
-
-  <p class="sns">snsなし</p>
+    <div class="caption">
+      <p class="name">トイハニロフ</p>
+      <p class="description">作詞、作編曲、歌、ミックス、マスタリング、アートワーク、動画など全てを自身で手がけている。</p>
+      <p class="sns">snsなし</p>
+    </div>
+  </div>
 </body>
 </html>
