@@ -1,69 +1,81 @@
-<!DOCTYPE html><html lang="ja">
+
+<!DOCTYPE html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toihanirofu</title>
   <style>
-body {
-  margin: 0;
-  background-color: #000;
-  color: #ccc;
-  font-family: "Courier New", Courier, monospace;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding-top: 18vh; /* ← デスクトップ用の余白 */
-  padding-bottom: 40px;
-  box-sizing: border-box;
-}
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #ccc;
+      font-family: "Courier New", Courier, monospace;
+      min-height: 100vh;
+      padding: 15vh 20px 40px;
+      box-sizing: border-box;
+    }
 
-img {
-  width: 30%;
-  max-width: 600px;
-  height: auto;
-  margin-bottom: 40px;
-}
+    .gallery {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-/* 👇 スマホだけ余白をさらに小さくして上寄せに */
-@media (max-width: 768px) {
-  body {
-    padding-top: 19vh; /* スマホ用に、上にグッと寄せる */
-  }
+    .artwork {
+      display: block;
+      width: 30vw;
+      max-width: 600px;
+      height: auto;
+    }
 
-  img {
-    width: 80%;
-    max-width: none;
-  }
-}
     nav {
       display: flex;
-      flex-direction: row; /* ← 横並びに変更 */
-      gap: 28px;            /* ← 間隔を広めに */
+      flex-direction: row;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 40px;
       font-size: 14px;
       text-transform: lowercase;
     }
+
     a {
       color: #888;
       text-decoration: none;
       transition: color 0.3s;
     }
+
     a:hover {
       color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .artwork {
+        width: 80vw;
+      }
+
+      nav {
+        gap: 12px;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="images/bakemono.png" alt="bakemono.png">
-  <nav>
-    <a href="profile.html">profile</a>
-    <a href="music.html">music</a>
-    <a href="log.html">log</a>
-    <a href="shop.html">shop</a>
-    <a href="x.html">&times;</a>
-    <a href="gallery.html">.</a>
-    <a href="black.html">–</a>
-  </nav>
+  <div class="gallery">
+    <img class="artwork" src="images/bakemono.png" alt="bakemono.png">
+
+    <nav>
+      <a href="profile.html">profile</a>
+      <a href="music.html">music</a>
+      <a href="log.html">log</a>
+      <a href="shop.html">shop</a>
+      <a href="x.html">&times;</a>
+      <a href="gallery.html">.</a>
+      <a href="black.html">–</a>
+    </nav>
+  </div>
 </body>
 </html>
